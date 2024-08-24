@@ -1,4 +1,4 @@
-Aquí te indico algunos aspectos que podrías considerar para completar y mejorar tu proyecto de eCommerce:
+
 
 1. Implementación de CRUD Completo
 Crear: Añadir una interfaz para que los usuarios puedan agregar nuevos productos. Necesitarás una forma de manejar las solicitudes POST a la API.
