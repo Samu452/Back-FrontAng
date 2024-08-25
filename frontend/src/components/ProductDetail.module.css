@@ -1,0 +1,24 @@
+/* src/components/ProductDetail.module.css */
+.productDetail {
+  padding: 20px;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: green;
+}
+
+.description {
+  margin-top: 20px;
+}

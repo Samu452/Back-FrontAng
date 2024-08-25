@@ -1,0 +1,36 @@
+.productCard {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 16px;
+  color: #333;
+}
+
+.viewDetails {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff; /* Ejemplo de color de fondo */
+  color: white;              /* Ejemplo de color del texto */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.viewDetails:hover {
+  background-color: #0056b3; /* Ejemplo de color de fondo al pasar el cursor */
+}

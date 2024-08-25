@@ -1,28 +1,31 @@
-import React, { useState, useEffect } from "react";
+// src/components/ProductList.js
+
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ProductCard from "./ProductCard";
+import "./ProductList.css"; // Asegúrate de tener el archivo CSS para los estilos
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/products")
-      .then((response) => setProducts(response.data))
-      .catch((error) => console.error("Error fetching products:", error));
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
   }, []);
 
   return (
-    <div>
-      <h2>Product List</h2>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-            <p>${product.price}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="product-list">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   );
 };
