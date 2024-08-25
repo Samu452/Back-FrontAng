@@ -1,24 +1,18 @@
 // src/components/ProductList.js
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
-import "./ProductList.css"; // Asegúrate de tener el archivo CSS para los estilos
+import "./ProductList.css"; // Asegúrate de tener el archivo de estilos
 
-const ProductList = () => {
+function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/api/products");
-        setProducts(response.data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    fetchProducts();
+    axios
+      .get("http://localhost:5000/api/products")
+      .then((response) => setProducts(response.data))
+      .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
   return (
@@ -28,6 +22,6 @@ const ProductList = () => {
       ))}
     </div>
   );
-};
+}
 
 export default ProductList;

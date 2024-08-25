@@ -1,10 +1,10 @@
 /* src/components/Header.css */
 
 .header {
-  background-color: #282c34;
-  padding: 15px 20px;
+  background: linear-gradient(90deg, rgba(50, 115, 220, 1) 0%, rgba(100, 150, 255, 1) 100%);
+  padding: 10px 20px;
   color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
@@ -21,12 +21,14 @@
 }
 
 .brand-link {
-  color: #61dafb;
+  color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .brand-link:hover {
-  text-decoration: underline;
+  color: #ffe600; /* Color amarillo vibrante en el hover */
+  transform: scale(1.1);
 }
 
 .navbar-nav {
@@ -43,12 +45,14 @@
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #61dafb;
-  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente en el hover */
+  color: #ffe600;
 }
